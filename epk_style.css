@@ -1,0 +1,87 @@
+@import "http://fonts.googleapis.com/css?family=Ubuntu";
+.main{
+width:330px;
+height:550px;
+margin:0 auto;
+font-family:'Ubuntu',sans-serif;
+padding-left: 100px ;
+box-align: center ;
+
+}
+.main .form_sample{
+text-align:center;
+/*border:1px solid #ccc;*/
+width:80%;
+padding:0 50px 15px;
+padding-left: 30px ;
+margin-top:20px;
+/*box-shadow:0 0 15px;*/
+/*border-radius:6px;*/
+float:left;
+opacity: 1;
+background-color: white;
+}
+
+.contact_form {
+z-index: 500;
+}
+
+
+.main .form_sample form h2{
+    margin-top:40px
+    }
+.main .form_sample form hr{
+    margin-top:-5px;
+    }
+.main .form_sample form label{
+    float:left;
+    font-size:16px
+    }
+.main .form_sample form input[type="text"]{
+    width:100%;
+    margin-top:5px;
+    height:12px;
+    margin-bottom:15px;
+    padding:10px;
+    border:1px solid #929292;
+    box-shadow:0 0 2px;
+    font-size: 11px;
+    }
+
+.main .form_sample form input[type="email"]{
+    width:100%;
+    margin-top:5px;
+    height:12px;
+    margin-bottom:15px;
+    padding:10px;
+    border:1px solid #929292;
+    box-shadow:0 0 2px;
+    font-size: 11px;
+        }
+.main .form_sample form textarea{
+        width:100%;
+        border:1px solid #929292;
+        padding:10px;
+        margin-bottom:25px;
+        margin-top:10px;
+        height:60px;
+        box-shadow:0 0 2px;
+        resize:none;
+        font-family:'Ubuntu',sans-serif;
+        font-size: 11px;
+        }
+.main .form_sample form input[type="submit"]{
+        width:90%;
+        padding:10px 55px;
+        background-color: #035307f1;
+        margin-left: 20px;
+        border:none;
+        color:#fff;
+        font-size:18px;
+        font-weight:700;
+        cursor:pointer;
+        font-family:'Ubuntu',sans-serif;
+        }
+input[type=submit] :hover {
+background-color: #45a049;
+          }
