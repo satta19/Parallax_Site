@@ -1,0 +1,58 @@
+git clone https://github.com/satta19/Parallax_Site.git
+
+
+
+cd Parallax_Site
+
+
+
+git checkout -b f1
+
+
+
+git branch -a 
+
+
+
+git status
+
+
+
+git add . 
+
+
+
+git commit -m "message"
+
+
+
+git status 
+
+git checkout master
+
+
+
+git branch -a
+
+
+
+git merge f1 
+
+
+
+git status 
+
+
+
+git push -u origin master 
+
+
+
+
+
+
+
+
+
+
+
