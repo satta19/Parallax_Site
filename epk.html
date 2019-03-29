@@ -7,30 +7,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="epk_style.css">
+    <link rel="stylesheet" href="video.css">
 
 
     <!--ICONS wala-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
 
+    <!-- For videos -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#headerVideoLink').magnificPopup({
+                type: 'inline',
+                midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+            });
+        });
+    </script>
+
+
+
 </head>
 
 <body>
-    
+
+
     <div class="gallery-section">
-        
-        
+
+        <!-- 
         <div class="back">
-                    <a href="index.html" class="iconbtn fas fa-home"></a>
-        </div>
-        
-        
+            <a href="index.html" class="iconbtn fas fa-home"></a>
+        </div> -->
+
+
         <div class="inner-width">
             <h1>My Gallery</h1>
 
             <!--Adding border under heading-->
             <div class="border"></div>
-            
+
             <div class="gallery">
 
                 <a href="img/1.png" class="image">
@@ -80,63 +99,95 @@
         });
     </script>-->
     <!--Contact Us-->
-   
-        <div class="contact_us_wrapper">
-            <div class="row">
-                <!--Column 1 of Contact Us-->
-                <div class="column1">
-                    <h3>Contact GenesisTheBeginning</h3>
-                    <img src="logo/logo_strohl_3.png" class="logo center">
-                    <table class="table_contact" id="table_contact">
-                        <tr>
-                            <td>
-                                <b>Sourav: </b>+91 8933993392
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>Sourav: </b>+91 8933993392
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>Email: </b><a href="mailto:@sourav@parallax.com">sourav@parallax.com</a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <!--Column Gap-->
-                <div class="gap">
-                    <div class="line"></div>
-                </div>
-                <!--Column 2 of Contact Us-->
-                <div class="column2">
-                    <div class="form_sample" id="form_sample">
-                        <form id="contact_form" action="" method="POST">
-                            <h2>Contact Us</h2>
-                            <hr>
-                            <br>
 
-                            <label for="fname"></label>
-                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                            <br>
 
-                            <label for="dmail"></label>
-                            <input type="email" id="dmail" name="email" placeholder="Your email..">
-                            <br>
 
-                            <label for="dmessage"></label>
-                            <textarea name="dmessage" id="dmessage" placeholder="Message"></textarea>
-                            <br>
+    <!-- Video Section started -->
 
-                            <input type="submit" id="dsubmit" name="dsubmit" value="Submit">
+    <div class="video_section">
 
-                        </form>
+
+        <h1>My Videos</h1>
+
+        <!--Adding border under heading-->
+        <div class="border"></div>
+        <table class="video_table">
+            <tr class="video_row">
+                <td class="video_col">
+                    <img class="video_image img1" src="https://i.ytimg.com/vi/HMzQwsWBYmM/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD0lUzPO-3Bvg83FcLpr8XBPWjKzA" style="width:100%">
+                    <a class="iconbtn fas fa-play" href="#headerPopup" id="headerVideoLink" target="_blank"></a>
+                    <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+                        <iframe width="854" height="480" src="https://www.youtube.com/embed/vMAeVPmV2ec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
+
+
+                </td>
+                <td class="video_col"></td>
+                <td class="video_col"></td>
+            </tr>
+
+        </table>
+    </div>
+    <!-- video end -->
+
+
+
+    <div class="contact_us_wrapper">
+        <div class="row">
+            <!--Column 1 of Contact Us-->
+            <div class="column1">
+                <h3>Contact GenesisTheBeginning</h3>
+                <img src="logo/logo_strohl_3.png" class="logo center">
+                <table class="table_contact" id="table_contact">
+                    <tr>
+                        <td>
+                            <b>Sourav: </b>+91 8933993392
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Sourav: </b>+91 8933993392
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Email: </b><a href="mailto:@sourav@parallax.com">sourav@parallax.com</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--Column Gap-->
+            <div class="gap">
+                <div class="line"></div>
+            </div>
+            <!--Column 2 of Contact Us-->
+            <div class="column2">
+                <div class="form_sample" id="form_sample">
+                    <form id="contact_form" action="" method="POST">
+                        <h2>Contact Us</h2>
+                        <hr>
+                        <br>
+
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <br>
+
+                        <label for="dmail"></label>
+                        <input type="email" id="dmail" name="email" placeholder="Your email..">
+                        <br>
+
+                        <label for="dmessage"></label>
+                        <textarea name="dmessage" id="dmessage" placeholder="Message"></textarea>
+                        <br>
+
+                        <input type="submit" id="dsubmit" name="dsubmit" value="Submit">
+
+                    </form>
                 </div>
             </div>
         </div>
-    
+    </div>
+
 
 
 </body>

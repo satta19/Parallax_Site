@@ -1,7 +1,6 @@
 body {
     margin-left: 50px;
     margin-right: 50px;
-    
 }
 
 html {
@@ -12,7 +11,8 @@ html {
     box-sizing: border-box;
 }
 
-.back{
+
+/* .back{
     position: relative;
     width:50px;
     height:50px;
@@ -27,7 +27,7 @@ html {
     font-size: 30px;
     color:rgb(41, 41, 43);
     
-}
+} */
 
 
 /* Create two equal columns that floats next to each other */
@@ -38,7 +38,6 @@ html {
     width: 30%;
     padding: 10px;
     background: rgb(255, 255, 255);
-    ;
     height: 350px;
     /* Should be removed. Only for demonstration */
 }
@@ -47,7 +46,6 @@ img .logo {
     position: absolute;
     border: 50px;
     max-width: 100%;
-    
 }
 
 .center {
@@ -55,7 +53,6 @@ img .logo {
     margin-left: auto;
     margin-right: auto;
     height: 50%;
-    
 }
 
 .column2 {
@@ -221,8 +218,7 @@ td {
 .contact_us_wrapper {
     width: 100%;
     padding: 80px 0;
-    background:white;
-
+    background: white;
 }
 
 
@@ -233,8 +229,6 @@ td {
     padding: 60px 0;
     background: white;
     box-sizing: border-box;
-
-   
 }
 
 .inner-width {
@@ -242,8 +236,6 @@ td {
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
-
-    
 }
 
 .gallery-section h1 {
