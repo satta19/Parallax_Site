@@ -1,0 +1,300 @@
+body {
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+html {
+    padding-top: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.back{
+    position: relative;
+    width:50px;
+    height:50px;
+    float:right;
+    right: 40px;
+    bottom:10px;
+}
+
+.back a{
+   position: absolute;
+    align-self: center;
+    font-size: 30px;
+    color:rgb(41, 41, 43);
+    
+}
+
+
+/* Create two equal columns that floats next to each other */
+
+.column1 {
+    position: relative;
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    ;
+    height: 350px;
+    /* Should be removed. Only for demonstration */
+}
+
+img .logo {
+    position: absolute;
+    border: 50px;
+    max-width: 100%;
+    
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    
+}
+
+.column2 {
+    float: left;
+    width: 65%;
+    background: rgb(255, 255, 255);
+    height: 350px;
+    /* Should be removed. Only for demonstration */
+    text-align: center;
+    padding: 0px 30px 0px 30px;
+}
+
+.gap {
+    position: relative;
+    float: left;
+    width: 5%;
+    padding: 10px;
+    background: white;
+    height: 350px;
+    /* Should be removed. Only for demonstration */
+}
+
+.gap .line {
+    border-left: 1px dotted black;
+    height: 350px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    top: 0;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@import "http://fonts.googleapis.com/css?family=Ubuntu";
+.main {
+    width: 330px;
+    height: 550px;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: 100px;
+    box-align: center;
+}
+
+
+/*
+.form_sample{
+
+/*border:1px solid #ccc;
+width:65%;
+text-align:center;
+padding:0 50px 15px;
+padding-left: 30px ;
+
+/*box-shadow:0 0 15px;
+/*border-radius:6px;
+float:left;
+opacity: 1;
+background-color: white;
+} 
+
+*/
+
+.contact_form {
+    z-index: 500;
+}
+
+.form_sample form hr {
+    margin-top: -5px;
+    width: 40%;
+}
+
+.form_sample form label {
+    float: left;
+    font-size: 16px
+}
+
+.form_sample form input[type="text"] {
+    width: 50%;
+    margin-top: 5px;
+    height: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #929292;
+    box-shadow: 0 0 2px;
+    font-size: 11px;
+}
+
+.form_sample form input[type="email"] {
+    width: 50%;
+    margin-top: 5px;
+    height: 12px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #929292;
+    border-radius: 10px;
+    box-shadow: 0 0 2px;
+    font-size: 11px;
+}
+
+.form_sample form textarea {
+    width: 50%;
+    border: 1px solid #929292;
+    padding: 15px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    height: 60px;
+    box-shadow: 0 0 2px;
+    border-radius: 10px;
+    resize: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 11px;
+}
+
+.form_sample form input[type="submit"] {
+    width: 40%;
+    padding: 10px 55px;
+    background-color: #035307f1;
+    margin-left: 20px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+input[type=submit] :hover {
+    background-color: #45a049;
+}
+
+.table_contact {
+    position: absolute;
+    bottom: 15px;
+    left: 100px;
+}
+
+td {
+    margin: 0;
+}
+
+.column1 h3 {
+    padding-left: 70px;
+}
+
+.contact_us_wrapper {
+    width: 100%;
+    padding: 80px 0;
+    background:white;
+
+}
+
+
+/* Image Section CSS */
+
+.gallery-section {
+    width: 100%;
+    padding: 60px 0;
+    background: white;
+    box-sizing: border-box;
+
+   
+}
+
+.inner-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+
+    
+}
+
+.gallery-section h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.border {
+    width: 180px;
+    height: 4px;
+    background: #333;
+    margin: 60px auto;
+}
+
+.gallery-section .gallery {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.gallery-section .image {
+    flex: 25%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-section .image img {
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.gallery-section .image:hover img {
+    transform: scale(1.4) rotate(15deg);
+}
+
+@media screen and (max-width:960px) {
+    .gallery-section .image {
+        flex: 33.33%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .gallery-section .image {
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .gallery-section .image {
+        flex: 100%;
+    }
+}

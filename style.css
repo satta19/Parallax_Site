@@ -1,0 +1,141 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.img1,
+.img2,
+.img3 {
+    position: relative;
+    opacity: 0.60;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.img1 {
+    background-image: url('../Parallax_Site/img/pexels-photo-1370538.jpeg');
+    min-height: 100%;
+}
+
+.img2 {
+    background-image: url('../Parallax_Site/img/pexels-photo-713126.jpeg');
+    min-height: 400px;
+}
+
+.img3 {
+    background-image: url('../Parallax_Site/img/pexels-photo-1105666.jpeg');
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-light {
+    background-color: #282e34;
+    color: #dddddd;
+}
+
+.txt {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.txt .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.txt .border.trans {
+    color: #af0c22;
+    font-weight: 700;
+    background-color: transparent;
+}
+
+.wrapper nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .3s;
+    z-index: 1;
+}
+
+.wrapper nav.black {
+    background: rgba(0, 0, 0, 0.959);
+    height: 100px;
+    padding: 10px 100px;
+}
+
+.wrapper nav .logo {
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    transition: .3s
+}
+
+.wrapper nav.black .logo {
+    color: #fff;
+}
+
+.wrapper nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.wrapper nav ul li {
+    list-style: none;
+}
+
+.wrapper nav ul li a {
+    line-height: 80px;
+    color: #151515;
+    padding: 12px 30px;
+    font-weight: 500;
+    text-shadow: 2px 2px rgb(88, 85, 85);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.wrapper nav ul li a:hover {
+    color: #151515;
+    text-shadow: 2px 2px rgb(88, 85, 85);
+    font-size: 120%;
+}
+
+.wrapper nav.black ul li a {
+    color: #fff;
+}
+
+.wrapper nav ul li a:focus {
+    outline: none;
+}
