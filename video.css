@@ -18,6 +18,10 @@
     margin: 0 auto;
 }
 
+.video_section {
+    margin-top: 80px;
+}
+
 .video_section h1 {
     text-align: center;
     text-transform: uppercase;

@@ -26,22 +26,18 @@
                 type: 'inline',
                 midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
             });
-        });
-
-        $(document).ready(function() {
             $('#headerVideoLink2').magnificPopup({
                 type: 'inline',
                 midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
             });
-        });
-
-        $(document).ready(function() {
             $('#headerVideoLink3').magnificPopup({
                 type: 'inline',
                 midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
             });
         });
     </script>
+
+
 
 
 </head>
@@ -62,47 +58,151 @@
 
             <!--Adding border under heading-->
             <div class="border"></div>
+            <script>
+                function openModal() {
+                    document.getElementById('myModal').style.display = "block";
+                }
 
-            <div class="gallery">
+                function closeModal() {
+                    document.getElementById('myModal').style.display = "none";
+                }
 
-                <a href="img/1.png" class="image">
-                    <img src="img/1.png" alt="">
-                </a>
+                var slideIndex = 1;
+                showSlides(slideIndex);
 
-                <a href="img/2.png" class="image">
-                    <img src="img/2.png" alt="">
-                </a>
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
 
-                <a href="img/3.png" class="image">
-                    <img src="img/3.png" alt="">
-                </a>
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
 
-                <a href="img/4.png" class="image">
-                    <img src="img/4.png" alt="">
-                </a>
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    console.log(dots);
+                    var captionText = document.getElementById("caption");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    if (slides[slideIndex - 1]) {
+                        slides[slideIndex - 1].style.display = "block";
+                    }
 
-                <a href="img/5.png" class="image">
-                    <img src="img/5.png" alt="">
-                </a>
 
-                <a href="img/6.png" class="image">
-                    <img src="img/6.png" alt="">
-                </a>
+                }
+            </script>
 
-                <a href="img/7.png" class="image">
-                    <img src="img/7.png" alt="">
-                </a>
+            <style>
+                .mySlides {
+                    display: none;
+                }
+            </style>
 
-                <a href="img/8.png" class="image">
-                    <img src="img/8.png" alt="">
-                </a>
+
+
+
+            <div class="gallery row">
+
+                <div class="column">
+                    <img src="img/1.png" alt="" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                </div>
+
+                <div class="column">
+                    <img src="img/2.png" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                </div>
+
+                <div class="column">
+                    <img src="img/3.png" alt="" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                </div>
+
+                <div class="column">
+                    <img src="img/4.png" alt="" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+
+                <div class="column">
+                    <img src="img/5.png" alt="" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                </div>
+
+                <div class="column">
+                    <img src="img/6.png" alt="" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                </div>
+
+                <div class="column">
+                    <img src="img/7.png" alt="" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                </div>
+
+                <div class="column">
+                    <img src="img/8.png" alt="" onclick="openModal();currentSlide(8)" class="hover-shadow">
+                </div>
 
             </div>
-        </div>
-    </div>
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
 
 
-    <!--<script>
+                <div class="modal-content">
+                    <div class="mySlides">
+                        <img src="img/1.png" style="width:100%">
+
+                    </div>
+                    <div class="mySlides">
+
+                        <img src="img/2.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="img/4.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+
+                        <img src="img/5.png" style="width:100%">
+
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="img/6.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="img/7.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="img/8.png" style="width:100%">
+                    </div>
+
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+            </div>
+
+
+            <!--<script>
         $(".gallery").magnificPopup({
             delegate: 'a',
             type: 'image',
@@ -111,111 +211,111 @@
             }
         });
     </script>-->
-    <!--Contact Us-->
+            <!--Contact Us-->
 
 
 
-    <!-- Video Section started -->
+            <!-- Video Section started -->
 
-    <div class="video_section">
-
-
-        <h1>My Videos</h1>
+            <div class="video_section">
 
 
-        <div class="border"></div>
-        <!--Adding border under heading-->
-        <table class="video_table">
-            <tr class="video_row">
-                <td class="video_col">
-                    <div class="container">
-                        <img class="video_image img1" src="https://i.ytimg.com/vi/HMzQwsWBYmM/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD0lUzPO-3Bvg83FcLpr8XBPWjKzA" style="width:100%">
-                        <button class=" fas fa-play btn" href="#headerPopup" id="headerVideoLink" target="_blank"></button>
-                        <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
-                            <iframe width="854" height="480" src="https://www.youtube.com/embed/HMzQwsWBYmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
-                    </div>
-                </td>
-
-                <td class="video_col">
-                    <div class="container">
-                        <img class="video_image img2" src="https://i.ytimg.com/vi/f-BhYzHexJI/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCik-YMsuOncibehDqWBRWnHIQJsQ" style="width:100%">
-                        <button class=" fas fa-play btn" href="#headerPopup2" id="headerVideoLink2" target="_blank"></button>
-                        <div id="headerPopup2" class="mfp-hide embed-responsive embed-responsive-21by9">
-                            <iframe width="854" height="480" src="https://www.youtube.com/embed/f-BhYzHexJI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
-                    </div>
-                </td>
-                <td class="video_col">
-                    <div class="container">
-                        <img class="video_image img3" src="https://i.ytimg.com/vi/vMAeVPmV2ec/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBksJ_kzC59RObY_lXtnWO0EbdNBg" style="width:100%">
-                        <button class=" fas fa-play btn" href="#headerPopup3" id="headerVideoLink3" target="_blank"></button>
-                        <div id="headerPopup3" class="mfp-hide embed-responsive embed-responsive-21by9">
-                            <iframe width="854" height="480" src="https://www.youtube.com/embed/vMAeVPmV2ec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-
-        </table>
-    </div>
-    <!-- video end -->
+                <h1>My Videos</h1>
 
 
+                <div class="border"></div>
+                <!--Adding border under heading-->
+                <table class="video_table">
+                    <tr class="video_row">
+                        <td class="video_col">
+                            <div class="container">
+                                <img class="video_image img1" src="https://i.ytimg.com/vi/HMzQwsWBYmM/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD0lUzPO-3Bvg83FcLpr8XBPWjKzA" style="width:100%">
+                                <button class=" fas fa-play btn" href="#headerPopup" id="headerVideoLink" target="_blank"></button>
+                                <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+                                    <iframe width="854" height="480" src="https://www.youtube.com/embed/HMzQwsWBYmM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+                            </div>
+                        </td>
 
-    <div class="contact_us_wrapper">
-        <div class="row">
-            <!--Column 1 of Contact Us-->
-            <div class="column1">
-                <h3>Contact GenesisTheBeginning</h3>
-                <img src="logo/logo_strohl_3.png" class="logo center">
-                <table class="table_contact" id="table_contact">
-                    <tr>
-                        <td>
-                            <b>Sourav: </b>+91 8933993392
+                        <td class="video_col">
+                            <div class="container">
+                                <img class="video_image img2" src="https://i.ytimg.com/vi/f-BhYzHexJI/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCik-YMsuOncibehDqWBRWnHIQJsQ" style="width:100%">
+                                <button class=" fas fa-play btn" href="#headerPopup2" id="headerVideoLink2" target="_blank"></button>
+                                <div id="headerPopup2" class="mfp-hide embed-responsive embed-responsive-21by9">
+                                    <iframe width="854" height="480" src="https://www.youtube.com/embed/f-BhYzHexJI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+                            </div>
+                        </td>
+                        <td class="video_col">
+                            <div class="container">
+                                <img class="video_image img3" src="https://i.ytimg.com/vi/vMAeVPmV2ec/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBksJ_kzC59RObY_lXtnWO0EbdNBg" style="width:100%">
+                                <button class=" fas fa-play btn" href="#headerPopup3" id="headerVideoLink3" target="_blank"></button>
+                                <div id="headerPopup3" class="mfp-hide embed-responsive embed-responsive-21by9">
+                                    <iframe width="854" height="480" src="https://www.youtube.com/embed/vMAeVPmV2ec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <b>Sourav: </b>+91 8933993392
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Email: </b><a href="mailto:@sourav@parallax.com">sourav@parallax.com</a>
-                        </td>
-                    </tr>
+
                 </table>
             </div>
-            <!--Column Gap-->
-            <div class="gap">
-                <div class="line"></div>
-            </div>
-            <!--Column 2 of Contact Us-->
-            <div class="column2">
-                <div class="form_sample" id="form_sample">
-                    <form id="contact_form" action="" method="POST">
-                        <h2>Contact Us</h2>
-                        <hr>
-                        <br>
+            <!-- video end -->
 
-                        <label for="fname"></label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                        <br>
 
-                        <label for="dmail"></label>
-                        <input type="email" id="dmail" name="email" placeholder="Your email..">
-                        <br>
 
-                        <label for="dmessage"></label>
-                        <textarea name="dmessage" id="dmessage" placeholder="Message"></textarea>
-                        <br>
+            <div class="contact_us_wrapper">
+                <div class="row">
+                    <!--Column 1 of Contact Us-->
+                    <div class="column1">
+                        <h3>Contact GenesisTheBeginning</h3>
+                        <img src="logo/logo_strohl_3.png" class="logo center">
+                        <table class="table_contact" id="table_contact">
+                            <tr>
+                                <td>
+                                    <b>Sourav: </b>+91 8933993392
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Sourav: </b>+91 8933993392
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Email: </b><a href="mailto:@sourav@parallax.com">sourav@parallax.com</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--Column Gap-->
+                    <div class="gap">
+                        <div class="line"></div>
+                    </div>
+                    <!--Column 2 of Contact Us-->
+                    <div class="column2">
+                        <div class="form_sample" id="form_sample">
+                            <form id="contact_form" action="" method="POST">
+                                <h2>Contact Us</h2>
+                                <hr>
+                                <br>
 
-                        <input type="submit" id="dsubmit" name="dsubmit" value="Submit">
+                                <label for="fname"></label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                <br>
 
-                    </form>
+                                <label for="dmail"></label>
+                                <input type="email" id="dmail" name="email" placeholder="Your email..">
+                                <br>
+
+                                <label for="dmessage"></label>
+                                <textarea name="dmessage" id="dmessage" placeholder="Message"></textarea>
+                                <br>
+
+                                <input type="submit" id="dsubmit" name="dsubmit" value="Submit">
+
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
 
 
