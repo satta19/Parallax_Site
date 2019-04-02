@@ -40,11 +40,10 @@
 .v1 {
     background-repeat: no-repeat;
     background-image: url("https://i.ytimg.com/vi/HMzQwsWBYmM/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD0lUzPO-3Bvg83FcLpr8XBPWjKzA");
-    opacity: 0.72;
 }
 
 img.video_image {
-    opacity: 1;
+    opacity: 0.9;
     display: block;
     width: 100%;
     height: auto;
@@ -52,26 +51,39 @@ img.video_image {
     backface-visibility: hidden;
 }
 
-img.video_image:hover {
-    opacity: 0.3;
+img.video_image:hover {}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
 }
 
-.iconbtn {
-    width: 40px;
-    height: 40px;
-    color: red;
-    text-decoration: none;
-    margin: 20px;
-    font-size: 20px;
-    border-radius: 50%;
-    padding: 0;
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 20000;
+    -ms-transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.71;
 }
 
-.iconbtn:hover {
+.container .btn:hover {
+    background-color: red;
     opacity: 1;
 }
 

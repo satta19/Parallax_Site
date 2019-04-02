@@ -28,6 +28,6 @@ JS Sites
 -------------------------
 HTML Sites
 -------------------------
-
-
+1) https://medium.com/notes-from-the-classroom/basic-guide-to-get-a-domain-set-up-web-hosting-and-upload-your-first-website-via-ftp-ecc7e5e4d557 
+2) https://labs.spotify.com/2015/03/09/understanding-spotify-web-api/
 
