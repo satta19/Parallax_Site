@@ -1,10 +1,8 @@
-.footer{
-   background-size: auto;
+.footer {
+    background-size: auto;
     background-image: url('../Parallax_Site/img/pexels-photo-1370538.jpeg');
     border-radius: 2px;
 }
-
-
 
 .footer_table {
     width: 100%;
@@ -15,7 +13,7 @@
 
 tr.footer_row {
     padding: 0;
-    background-color :rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 td.meet_us,
